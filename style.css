@@ -1,0 +1,371 @@
+.container-general-consulta {
+  max-width: 360px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px 0;
+  align-items: center;
+}
+
+/* .container-consulta{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 0;
+}
+     */
+.buttonn {
+  padding: 1em 1em;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+  color: #0E0706;
+  background-color: #D1807E;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.buttonn:hover {
+  background-color: #FBBAB0;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+  color: #0E0706;
+  transform: translateY(-1px);
+}
+
+.buttonn:active {
+  transform: translateY(-1px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  font-family: "Raleway", sans-serif;
+  color: none;
+}
+
+/* fondo pag */
+body {
+  background-image: url(/images/fondo/wickedbackground.svg);
+  scroll-behavior: smooth;
+  background-attachment: fixed, scroll;
+  background-size: cover;
+  background-color: none !important;
+  background-color: #0A0A0A;
+  z-index: -2;
+  position: relative;
+}
+
+/* scrollbar */
+body::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #FBBAB0;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #E29698;
+  border-radius: 0.4em;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #D1807E;
+  animation-duration: 1s;
+}
+
+/* navbar and footer css */
+.header {
+  background-color: #D1807E;
+  position: sticky;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom-style: solid;
+  border-color: #0E0706;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav-link {
+  color: #0E0706;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0 40px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  gap: 10px;
+}
+
+.nav-menu {
+  display: flex;
+  /* margin-right: 40px; */
+  list-style: none;
+  align-items: center;
+}
+
+.uit {
+  color: #0E0706;
+}
+
+.nav-menu-item {
+  font-size: 18px;
+  margin: 0 10px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content;
+}
+.nav-menu-item:nth-child(4) {
+  width: 65px;
+  /* padding-top: 60px; */
+}
+
+.nav-menu-link {
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+  color: #0E0706;
+  transition: 0.4s;
+}
+
+.nav-toggle {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 60px;
+  cursor: pointer;
+  display: none;
+}
+
+/* MOBILE */
+@media (min-width: 1400px) {
+  .nav-container-social {
+    display: none;
+  }
+}
+@media (max-width: 1400px) {
+  .nav-container-social {
+    position: absolute;
+    bottom: 40px;
+  }
+
+  .nav-social-icon {
+    font-size: 40px;
+  }
+
+  .nav-social-ul {
+    width: 300px;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .social {
+    display: none;
+  }
+
+  .social ul {
+    display: none;
+  }
+
+  .social ul li {
+    display: none;
+  }
+
+  .social ul li:hover {
+    display: none;
+  }
+
+  .social ul li:hover a {
+    display: none;
+  }
+
+  .social ul li:hover i {
+    display: none;
+  }
+
+  .social ul li i {
+    display: none;
+  }
+
+  #contacto {
+    height: 100%;
+  }
+
+  .header {
+    z-index: 999;
+    height: 80px;
+    background-color: #D1807E;
+    position: sticky;
+  }
+
+  .logo {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 16px;
+    text-transform: uppercase;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #D1807E;
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    padding: 20px 0;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    left: 100%;
+    transition: left 0.3s;
+    z-index: 999;
+  }
+
+  .nav-menu-item {
+    line-height: 70px;
+  }
+
+  .nav-menu-link:hover {
+    background: none;
+    color: #0E0706;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu_visible {
+    left: 0;
+  }
+
+  .nav-toggle:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+/* footer */
+.fondo-footer {
+  /* background-image:url(/images/footer/wave.svg); */
+  z-index: 1;
+  background-size: cover;
+  clip-path: polygon(0 0%, 100% 20%, 100% 100%, 0% 100%);
+  background-color: #D1807E;
+  z-index: -2;
+  position: relative;
+}
+
+.container-general-footer {
+  margin-top: 50px;
+}
+
+.container-3partes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.footer-1-container {
+  margin-top: 40px;
+}
+
+.footer-1-logo-p {
+  padding: 20px;
+}
+
+.title-footer-1 {
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.text-footer-1-grl {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  list-style: none;
+}
+
+.text-footer-1 {
+  margin: 11px 0;
+}
+
+.footer-1-contacto {
+  margin: 30px 0px;
+}
+
+.footer-2-container {
+  margin-top: 70px;
+  padding: 20px;
+}
+
+.list-footer2 {
+  padding: 5px;
+}
+
+.li-footer2 {
+  font-size: 16px;
+  font-weight: 500;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-content: center;
+}
+
+.footer-3-container {
+  margin-top: 44px;
+  padding: 20px;
+}
+
+.footer-3-container-li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.uil {
+  padding: 6px 20px;
+  font-size: 40px;
+  color: #0E0706;
+}
+
+.copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */
