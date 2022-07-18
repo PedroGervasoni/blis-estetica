@@ -112,10 +112,7 @@ body::-webkit-scrollbar {
     line-height: 80px;
     text-transform: uppercase;
     width: max-content;
-    &:nth-child(4){
-      width: 65px;
-      /* padding-top: 60px; */
-    }
+    
   }
   
   .nav-menu-link {
@@ -149,9 +146,15 @@ body::-webkit-scrollbar {
     .nav-container-social{
       display: none;
     }
+   
+    .mobile{
+      display: none;
+    }
   }
   @media (max-width: 1400px) {
-    
+    .desktop{
+      display: initial;
+    }
     
     
     .nav-container-social{
