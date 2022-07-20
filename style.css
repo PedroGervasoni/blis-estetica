@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 30px;
+  margin-bottom: 60px;
 }
 
 .text-inicio {
@@ -80,6 +81,61 @@
 .img-inicio {
   border-radius: 0.4em;
   box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.section-cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.section-cards2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+
+.container-general-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 900px;
+}
+
+.container-cards-inicio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+  max-width: 350px;
+  height: 170px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.img-card {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.title-card-inicio {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.text-card-inicio {
+  font-weight: 500;
+  margin: 0 10px 0;
+  font-size: 12px;
 }
 
 * {
