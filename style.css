@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container-general-consulta {
   display: flex;
   width: 100%;
@@ -104,6 +105,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 900px;
+  z-index: -2;
 }
 
 .container-cards-inicio {
@@ -149,11 +151,73 @@
   font-size: 27px;
 }
 
+.container-title-testimonios {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.container-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .avatar {
   vertical-align: middle;
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+
+.review-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.review-card {
+  max-width: 340px;
+  min-height: 200px;
+  min-width: 340px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.content-review-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.click-reseña {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.review-card-user {
+  display: flex;
+  align-items: center;
+}
+
+.review-card-img {
+  width: 55px;
+  border-radius: 50%;
+}
+
+.review-card-name {
+  font-size: 20px;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.text-review-content {
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 * {
