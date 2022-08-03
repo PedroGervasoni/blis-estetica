@@ -49,20 +49,23 @@
 
 
 .buttonn {
-  padding: 1em 1em;
+  box-sizing: border-box;
+  display: flex;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-weight: 600;
-  color: $negro;
-  background-color: $rosa-oscuro;
+  color: #0E0706;
+  background-color: #D1807E;
   border: none;
-  border-radius: 45px;
-  box-shadow: $box-shadow;
+  border-radius: 12px;
+  box-shadow: 5px 0 15px rgb(0 0 0 / 20%);
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
-  margin: 10px 0;
+  margin: 17px 0;
+  align-items: center;
+  padding-left: 20px;
 }
 
 .buttonn:hover {
@@ -164,12 +167,16 @@
     justify-content: center;
 }
 
-
+.centrador-cards{
+  display: flex;
+  justify-content: center;
+}
 .container-cards{
   display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center
+    justify-content: center;
+    max-width: 1430px;
 
 }
 
