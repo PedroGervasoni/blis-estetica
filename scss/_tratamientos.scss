@@ -15,6 +15,10 @@ $contentsClass: "summary + *";
   overflow: hidden; // because we're animating height
 }
 
+.container2{
+padding: 10px;
+
+}
 /*
   Closed state. Any CSS transitions work here
   The JS has a height calculation to make sliding opened/closed easier, but it's not necessary
@@ -158,8 +162,8 @@ p {
 details {
   $b: 6px;
 
-  background: #fff;
-  border: 1px solid $border;
+  background: none;
+  border: none;
   border-bottom: 0;
   list-style: none;
 
@@ -176,13 +180,13 @@ details {
 summary {
   $arrow-size: 0.5em;
 
-  display: block;
+ 
   transition: 0.2s;
   font-weight: 700;
   padding: 1em;
 
   &:focus {
-    outline: 2px solid $primary;
+    outline: none;
   }
 
   #{$accordionClass} &::after {
@@ -198,8 +202,9 @@ summary {
   }
 
   [open] & {
-    background: $primary;
-    color: $background;
+    text-align: center;
+    background:none;
+    color: $negro;
 
     &::after {
       margin-top: $arrow-size;
@@ -207,3 +212,26 @@ summary {
     }
   }
 }
+.container-general-acordeones{
+  align-items: center;
+}
+.container-acordeon{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: $box-shadow;
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: $border-radius;
+    max-width: 400px;
+}
+.container-img-acordeon{
+  padding-top: 20px;
+}
+.img-acordeon{
+  width: 200px;
+  border-radius: $border-radius;
+  
+}
+

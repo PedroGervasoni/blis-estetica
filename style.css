@@ -239,6 +239,10 @@
   overflow: hidden;
 }
 
+.container2 {
+  padding: 10px;
+}
+
 /*
   Closed state. Any CSS transitions work here
   The JS has a height calculation to make sliding opened/closed easier, but it's not necessary
@@ -350,8 +354,8 @@ p:last-child {
 }
 
 details {
-  background: #fff;
-  border: 1px solid hsl(260deg, 20%, 85%);
+  background: none;
+  border: none;
   border-bottom: 0;
   list-style: none;
 }
@@ -364,13 +368,12 @@ details:last-child {
 }
 
 summary {
-  display: block;
   transition: 0.2s;
   font-weight: 700;
   padding: 1em;
 }
 summary:focus {
-  outline: 2px solid hsl(260deg, 85%, 50%);
+  outline: none;
 }
 .collapse-init summary::after {
   border-right: 2px solid;
@@ -384,12 +387,38 @@ summary:focus {
   transition: inherit;
 }
 [open] summary {
-  background: hsl(260deg, 85%, 50%);
-  color: hsl(260deg, 90%, 98%);
+  text-align: center;
+  background: none;
+  color: #0E0706;
 }
 [open] summary::after {
   margin-top: 0.5em;
   transform: rotate(225deg);
+}
+
+.container-general-acordeones {
+  align-items: center;
+}
+
+.container-acordeon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 0.4em;
+  max-width: 400px;
+}
+
+.container-img-acordeon {
+  padding-top: 20px;
+}
+
+.img-acordeon {
+  width: 200px;
+  border-radius: 0.4em;
 }
 
 #testimonios {
