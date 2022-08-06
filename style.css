@@ -268,6 +268,11 @@
   cursor: pointer;
 }
 
+.collapse-init summary + * {
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+}
+
 /*
   This element exists so .details-wrapper has no extra margin/padding that can screw with the smooth height collapse
   You can style .details-wrapper decoratively but avoid anything that modifies the box and add it to .details-styling instead
@@ -290,32 +295,6 @@ p:last-child {
   margin-bottom: 0;
 }
 
-/* code {
-  $rot: 90;
-
-  background: hsla($hue + $rot, 70, 70, 0.1);
-  color: hsl($hue + $rot - 5, 75, 65);
-}
- */
-/* a {
-  color: $link;
-  box-shadow: inset 0 -3px lighten($link, 20);
-  font-weight: 700;
-  text-decoration: none;
-  transition: 0.2s;
-
-  &:hover,
-  &:focus {
-    box-shadow: inset 0 -1.2em $link;
-    color: $background;
-  }
-} */
-/* abbr {
-  font-variant: small-caps;
-  text-transform: lowercase;
-  font-size: 1.2em;
-}
- */
 [type=checkbox] {
   opacity: 0;
   position: absolute;
@@ -363,8 +342,8 @@ details:first-child {
   border-radius: 6px 6px 0 0;
 }
 details:last-child {
-  border-bottom: 1px solid hsl(260deg, 20%, 85%);
-  border-radius: 0 0 6px 6px;
+  border-bottom: none;
+  border-radius: none;
 }
 
 summary {
@@ -382,7 +361,7 @@ summary:focus {
   float: right;
   width: 0.5em;
   height: 0.5em;
-  margin-top: 0.25em;
+  /* margin-top: $arrow-size/2; */
   transform: rotate(45deg);
   transition: inherit;
 }
@@ -401,6 +380,7 @@ summary:focus {
 }
 
 .container-acordeon {
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -419,6 +399,7 @@ summary:focus {
 .img-acordeon {
   width: 200px;
   border-radius: 0.4em;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
 }
 
 #testimonios {

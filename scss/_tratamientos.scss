@@ -49,7 +49,10 @@ padding: 10px;
     cursor: pointer;
   }
 }
-
+.collapse-init summary + * {
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+}
 /*
   This element exists so .details-wrapper has no extra margin/padding that can screw with the smooth height collapse
   You can style .details-wrapper decoratively but avoid anything that modifies the box and add it to .details-styling instead
@@ -88,33 +91,7 @@ p {
   }
 }
 
-/* code {
-  $rot: 90;
 
-  background: hsla($hue + $rot, 70, 70, 0.1);
-  color: hsl($hue + $rot - 5, 75, 65);
-}
- */
-/* a {
-  color: $link;
-  box-shadow: inset 0 -3px lighten($link, 20);
-  font-weight: 700;
-  text-decoration: none;
-  transition: 0.2s;
-
-  &:hover,
-  &:focus {
-    box-shadow: inset 0 -1.2em $link;
-    color: $background;
-  }
-} */
-
-/* abbr {
-  font-variant: small-caps;
-  text-transform: lowercase;
-  font-size: 1.2em;
-}
- */
 [type="checkbox"] {
   opacity: 0;
   position: absolute;
@@ -172,8 +149,8 @@ details {
   }
 
   &:last-child {
-    border-bottom: 1px solid $border;
-    border-radius: 0 0 $b $b;
+    border-bottom: none;
+    border-radius: none;
   }
 }
 
@@ -196,7 +173,7 @@ summary {
     float: right;
     width: $arrow-size;
     height: $arrow-size;
-    margin-top: $arrow-size/2;
+    /* margin-top: $arrow-size/2; */
     transform: rotate(45deg);
     transition: inherit;
   }
@@ -216,6 +193,8 @@ summary {
   align-items: center;
 }
 .container-acordeon{
+  margin-bottom: 20px;
+  
   display: flex;
     flex-direction: column;
     align-items: center;
@@ -232,6 +211,7 @@ summary {
 .img-acordeon{
   width: 200px;
   border-radius: $border-radius;
+  box-shadow: $box-shadow;
   
 }
 
