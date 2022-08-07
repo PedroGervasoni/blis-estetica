@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Arvo");
 .container-general-consulta {
   display: flex;
   width: 100%;
@@ -228,12 +229,151 @@
   font-weight: 400;
 }
 
-/*
-  Please wrap your collapsible content in a single element or so help me
-  Must add a transition or it breaks because that's the whole purpose of this
-  Only one transition-duration works (see explanation on line #141 in JS)
-  You can add more to an inner wrapper (.details-styling)
-*/
+.h1-instalaciones {
+  margin-bottom: 10px;
+}
+
+.message {
+  border: 1px solid #d2d0d0;
+  padding: 2em;
+  font-size: 1.7vw;
+  box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
+}
+@supports (display: grid) {
+  .message {
+    display: none;
+  }
+}
+
+.section2 {
+  margin-top: -70px;
+  display: none;
+  padding: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .section2 {
+    padding: 4rem;
+  }
+}
+@supports (display: grid) {
+  .section2 {
+    display: block;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 150px;
+  grid-auto-flow: row dense;
+}
+
+.item {
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  background: #0c9a9a;
+  color: #fff;
+  grid-column-start: auto;
+  grid-row-start: auto;
+  color: #fff;
+  background: url("https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  counter-increment: item-counter;
+}
+.item:nth-of-type(3n) {
+  background-image: url("https://images.unsplash.com/photo-1422255198496-21531f12a6e8?dpr=2&auto=format&fit=crop&w=1500&h=996&q=80&cs=tinysrgb&crop=");
+}
+.item:nth-of-type(4n) {
+  background-image: url("https://images.unsplash.com/photo-1490914327627-9fe8d52f4d90?dpr=2&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop=");
+}
+.item:nth-of-type(5n) {
+  background-image: url("https://images.unsplash.com/photo-1476097297040-79e9e1603142?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=");
+}
+.item:nth-of-type(6n) {
+  background-image: url("https://images.unsplash.com/photo-1464652149449-f3b8538144aa?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=");
+}
+.item:after {
+  border-radius: 10px;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out;
+}
+.item:hover {
+  transform: scale(1.05);
+}
+.item:hover:after {
+  opacity: 0;
+}
+.item--medium {
+  grid-row-end: span 2;
+}
+.item--large {
+  grid-row-end: span 3;
+}
+.item--full {
+  grid-column-end: auto;
+}
+@media screen and (min-width: 768px) {
+  .item--full {
+    grid-column: 1/-1;
+    grid-row-end: span 2;
+  }
+}
+.item__details {
+  position: relative;
+  z-index: 1;
+  padding: 15px;
+  color: #444;
+  background: #fff;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  color: #828282;
+}
+.item__details:before {
+  content: counter(item-counter);
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-right: 0.5em;
+  color: #444;
+}
+
+.container-general-card {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.containter-p-tratamientos {
+  z-index: -999;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border-radius: 0.4em;
+  margin-top: -78px;
+  padding: 20px;
+}
+
+.p-tratamientos {
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .collapse-init summary + * {
   transition: all 0.25s ease-in-out;
   overflow: hidden;
@@ -243,11 +383,18 @@
   padding: 10px;
 }
 
-/*
-  Closed state. Any CSS transitions work here
-  The JS has a height calculation to make sliding opened/closed easier, but it's not necessary
-  Remove the height prop for a simple toggle on/off (after all that work I did for you?)
-*/
+.collapse-init :not(.panel-active) summary + * {
+  height: 0;
+  opacity: 0;
+  transform: scale(0.9);
+  transform-origin: bottom center;
+}
+
+.collapse-init summary + * {
+  transition: all 0.25s ease-in-out;
+  overflow: hidden;
+}
+
 .collapse-init :not(.panel-active) summary + * {
   height: 0;
   opacity: 0;
@@ -258,26 +405,19 @@
 .collapse-init summary {
   list-style: none;
 }
+
 .collapse-init summary::-webkit-details-marker {
   display: none;
 }
+
 .collapse-init summary::before {
   display: none;
 }
+
 .collapse-init summary {
   cursor: pointer;
 }
 
-.collapse-init summary + * {
-  transition: all 1s ease-in-out;
-  overflow: hidden;
-}
-
-/*
-  This element exists so .details-wrapper has no extra margin/padding that can screw with the smooth height collapse
-  You can style .details-wrapper decoratively but avoid anything that modifies the box and add it to .details-styling instead
-  Otherwise, this element is totally optional. Remove if you hate divitis
-*/
 .details-styling {
   padding: 1em;
 }
@@ -355,6 +495,7 @@ summary:focus {
   outline: none;
 }
 .collapse-init summary::after {
+  margin-left: 40px;
   border-right: 2px solid;
   border-bottom: 2px solid;
   content: "";
@@ -376,7 +517,10 @@ summary:focus {
 }
 
 .container-general-acordeones {
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .container-acordeon {
@@ -384,12 +528,12 @@ summary:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  border-radius: 0.4em;
-  max-width: 400px;
+  /* background: rgba( 255, 255, 255, 0.1 );
+  box-shadow: $box-shadow;
+  backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 0px );
+  border-radius: $border-radius; */
+  max-width: 1000px;
 }
 
 .container-img-acordeon {
@@ -397,7 +541,7 @@ summary:focus {
 }
 
 .img-acordeon {
-  width: 200px;
+  width: 330px;
   border-radius: 0.4em;
   box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
 }
@@ -462,6 +606,7 @@ body::-webkit-scrollbar-thumb:hover {
   height: auto;
   top: 0;
   left: 0;
+  z-index: 2;
 }
 
 .nav {

@@ -70,6 +70,7 @@ body::-webkit-scrollbar {
     height: auto;
     top: 0;
     left: 0;
+    z-index: 2;
   }
   
   .nav {
