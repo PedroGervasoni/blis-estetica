@@ -891,7 +891,7 @@ summary:focus {
 body {
   background-image: url(./images/fondo/wickedbackground.svg);
   background-attachment: fixed, scroll;
-  background-size: cover;
+  /* background-size: cover; */
   background-color: none !important;
   background-color: none;
   position: relative;
