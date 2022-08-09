@@ -8,7 +8,7 @@
   position: relative;
   z-index: 1;
   overflow-x: hidden;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #FEEEEC;
   display: flex;
   transition: 0.3s;
   flex-direction: column;
@@ -90,7 +90,7 @@
   will-change: top;
   background-size: cover;
   background-position: center;
-  filter: blur(30px);
+  /* filter: blur(30px); */
   transform: scale(1.2);
   transition: 0.5s;
 }

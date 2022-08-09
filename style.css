@@ -237,7 +237,7 @@
   position: relative;
   z-index: 1;
   overflow-x: hidden;
-  background-color: rgb(255, 255, 255);
+  background-color: #FEEEEC;
   display: flex;
   transition: 0.3s;
   flex-direction: column;
@@ -311,7 +311,7 @@
   will-change: top;
   background-size: cover;
   background-position: center;
-  filter: blur(30px);
+  /* filter: blur(30px); */
   transform: scale(1.2);
   transition: 0.5s;
 }
@@ -893,8 +893,7 @@ body {
   background-attachment: fixed, scroll;
   background-size: cover;
   background-color: none !important;
-  background-color: #0A0A0A;
-  z-index: -2;
+  background-color: none;
   position: relative;
 }
 
