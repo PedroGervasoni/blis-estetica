@@ -66,7 +66,7 @@ body::-webkit-scrollbar {
     height: auto;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 999;
   }
   
   .nav {
@@ -307,11 +307,11 @@ body::-webkit-scrollbar {
 .fondo-footer{
   /* background-image:url(/images/footer/wave.svg); */
  
-  z-index: 1;
+  
   background-size: cover;
   clip-path: polygon(0 0%, 100% 20%, 100% 100%, 0% 100%);
   background-color: $rosa-oscuro;
-  z-index: -2;
+  
   position: relative;
 }
 
