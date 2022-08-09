@@ -890,7 +890,6 @@ summary:focus {
 /* fondo pag */
 body {
   background-image: url(./images/fondo/wickedbackground.svg);
-  scroll-behavior: smooth;
   background-attachment: fixed, scroll;
   background-size: cover;
   background-color: none !important;
