@@ -110,7 +110,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 900px;
-  z-index: -2;
+  /* z-index: -2; */
 }
 
 .container-cards-inicio {
@@ -235,7 +235,7 @@
   margin: auto;
   overflow-y: auto;
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   overflow-x: hidden;
   background-color: #FEEEEC;
   display: flex;
@@ -479,7 +479,7 @@
   padding-left: 60px;
   padding-right: 20px;
   padding-bottom: 30px;
-  z-index: 1;
+  /* z-index: 1; */
 }
 .card-item:last-child {
   padding-bottom: 5px;
@@ -662,7 +662,7 @@
 }
 .item__details {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   padding: 15px;
   color: #444;
   background: #fff;
@@ -686,7 +686,7 @@
 }
 
 .containter-p-tratamientos {
-  z-index: -999;
+ /*  z-index: -999; */
   max-width: 400px;
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
@@ -748,11 +748,6 @@
 
 .details-styling {
   padding: 1em;
-}
-
-::selection {
-  background: hsl(40deg, 95%, 70%);
-  color: #4d4433;
 }
 
 p {
@@ -891,9 +886,8 @@ summary:focus {
 body {
   background-image: url(./images/fondo/wickedbackground.svg);
   background-attachment: fixed, scroll;
-  /* background-size: cover; */
+  background-size: cover;
   background-color: none !important;
-  background-color: none;
   position: relative;
 }
 
@@ -932,7 +926,7 @@ body::-webkit-scrollbar-thumb:hover {
   height: auto;
   top: 0;
   left: 0;
-  z-index: 2;
+ /*  z-index: 2; */
 }
 
 .nav {
@@ -1068,7 +1062,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   .header {
-    z-index: 999;
+   /*  z-index: 999; */
     height: 80px;
     background-color: #D1807E;
     position: sticky;
@@ -1094,7 +1088,7 @@ body::-webkit-scrollbar-thumb:hover {
     overflow-y: auto;
     left: 100%;
     transition: left 0.3s;
-    z-index: 999;
+   /*  z-index: 999; */
   }
 
   .nav-menu-item {
@@ -1121,11 +1115,11 @@ body::-webkit-scrollbar-thumb:hover {
 /* footer */
 .fondo-footer {
   /* background-image:url(/images/footer/wave.svg); */
-  z-index: 1;
+ /*  z-index: 1; */
   background-size: cover;
   clip-path: polygon(0 0%, 100% 20%, 100% 100%, 0% 100%);
   background-color: #D1807E;
-  z-index: -2;
+  /* z-index: -2; */
   position: relative;
 }
 

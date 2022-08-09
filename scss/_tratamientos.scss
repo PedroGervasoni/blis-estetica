@@ -103,12 +103,6 @@ $primary: hsl($hue, 85, 50);
 $link: hsl($hue, 75, 65);
 $border: hsl($hue, 20, 85);
 
-::selection {
-  $rot: 140;
-
-  background: hsl($hue + $rot, 95, 70);
-  color: adjust-hue($text, $rot);
-}
 
 
 
